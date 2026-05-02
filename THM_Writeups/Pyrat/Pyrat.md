@@ -95,6 +95,6 @@ Running the script, we see that the password is `abc123`.
 
 And I got root. 
 
-![{32B1F102-E0D4-4139-8695-050B50154119}.png](32B1F102-E0D4-4139-8695-050B50154119.png)
+![{32B1F102-E0D4-4139-8695-050B50154119}.png](Images/32B1F102-E0D4-4139-8695-050B50154119.png)
 
 Bam got the root flag.
