@@ -102,6 +102,7 @@ If the socket is admin, and “shell” is passed as input, it spawns a shell? T
 ```bash
 telnet  8000
 admin
+```
 
 ### Brute-Forcing the Password
 
