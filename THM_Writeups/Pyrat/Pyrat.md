@@ -2,12 +2,12 @@
 
 ## **Challenge Information:**
 
-**Link:** [tryhackme.com/room/pyrat](http://tryhackme.com/room/pyrat)
+**Link:** [tryhackme.com/room/pyrat](http://tryhackme.com/room/pyrat)  
 **Difficulty:** Easy  
 **Category:** Boot-to-Root  
 **Description:**  
 - Name: Pyrat
-- Description: Test your enumeration skills on this boot-to-root machine.  
+- Additional Info: Test your enumeration skills on this boot-to-root machine.  
 **Scenario:**   
 ![{7B64F933-AC99-40C5-8D27-43A8EB0C2316}.png](Images/7B64F933-AC99-40C5-8D27-43A8EB0C2316.png)
 
