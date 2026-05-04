@@ -15,7 +15,7 @@
 
 **Scenario:**
 
-![{64ABE144-A1E0-4AAF-8725-B204DAF311E3}.png](64ABE144-A1E0-4AAF-8725-B204DAF311E3.png)
+![{64ABE144-A1E0-4AAF-8725-B204DAF311E3}.png](Images/64ABE144-A1E0-4AAF-8725-B204DAF311E3.png)
 
 ## TLDR
 
@@ -37,18 +37,18 @@ This is a guided challenge so there are a lot of questions to answer.
     
     This is seen clearly in packets 80 and above. But it is better to develop a habit of using **filters** and **find** options instead of manual searching. Pressing `ctrl + F` in Wireshark brings it up, and we can add `user` to it.  
     
-    ![{DC9D1377-56A8-44B8-A917-26E20544776D}.png](DC9D1377-56A8-44B8-A917-26E20544776D.png)
+    ![{DC9D1377-56A8-44B8-A917-26E20544776D}.png](Images/DC9D1377-56A8-44B8-A917-26E20544776D.png)
     
 
 1. `What is the user's password?`
     
     The same can be done here. If `pass` is specified, many different passwords can be seen from the brute forcing attack. When the password is incorrect, the system outputs `Login incorrect`. So if `login` is searched, somewhere we could also find `login correct` or the like.
     
-    ![{FE6F87CB-D563-442F-A653-287FA6699C29}.png](FE6F87CB-D563-442F-A653-287FA6699C29.png)
+    ![{FE6F87CB-D563-442F-A653-287FA6699C29}.png](Images/FE6F87CB-D563-442F-A653-287FA6699C29.png)
     
     To find the password, we must backtrack to see what the user had input. But with so many packets, it is tiring. So, it is possible to right click the packet and select `follow tcp stream`, which will only show the packets belonging to that session. 
     
-    ![{645A96A9-BF5A-4776-A019-611C94A7EE5F}.png](645A96A9-BF5A-4776-A019-611C94A7EE5F.png)
+    ![{645A96A9-BF5A-4776-A019-611C94A7EE5F}.png](Images/645A96A9-BF5A-4776-A019-611C94A7EE5F.png)
     
     So the password is `password123`. The attacker uploaded his backdoor on the victim’s machine and changed its permissions to `777`, which means anybody can read write and execute it. The attacker will execute this to establish a connection with the victim and get foothold in their system. 
     
@@ -64,22 +64,22 @@ This is a guided challenge so there are a lot of questions to answer.
     
     Any files transferred over `FTP` can be viewed from the `FTP-Data` filter which includes their content as well.  
     
-    ![{D7FD4751-C2EB-4BFA-B69C-CDCCCBF67866}.png](D7FD4751-C2EB-4BFA-B69C-CDCCCBF67866.png)
+    ![{D7FD4751-C2EB-4BFA-B69C-CDCCCBF67866}.png](Images/D7FD4751-C2EB-4BFA-B69C-CDCCCBF67866.png)
     
     The contents of the reverse shell shows the URL from where it can be downloaded. 
     
-    ![{6F7544E0-CA97-4BF4-BC00-166E2CC94B3C}.png](6F7544E0-CA97-4BF4-BC00-166E2CC94B3C.png)
+    ![{6F7544E0-CA97-4BF4-BC00-166E2CC94B3C}.png](Images/6F7544E0-CA97-4BF4-BC00-166E2CC94B3C.png)
     
 
 1. `Which command did the attacker manually execute after getting a reverse shell?`
     
     After the backdoor was uploaded, there is a bunch of TCP packets. The first few packets initiates the connection and from where the attacker did `GET /shell.php` to execute the reverse shell and get access to the system. 
     
-    ![{80A6FE3C-6FAD-41B1-BA33-ED8034AFAB1E}.png](80A6FE3C-6FAD-41B1-BA33-ED8034AFAB1E.png)
+    ![{80A6FE3C-6FAD-41B1-BA33-ED8034AFAB1E}.png](Images/80A6FE3C-6FAD-41B1-BA33-ED8034AFAB1E.png)
     
     If this stream was `tcp.stream eq 19` then the next stream must be when the attacker got access to the system, which would also contain his commands. 
     
-    ![{6FEC648D-1207-4D41-BFAF-0C3C0E4F892E}.png](6FEC648D-1207-4D41-BFAF-0C3C0E4F892E.png)
+    ![{6FEC648D-1207-4D41-BFAF-0C3C0E4F892E}.png](Images/6FEC648D-1207-4D41-BFAF-0C3C0E4F892E.png)
     
     This is very useful since the attacker’s commands is visible. Then, he switched to jenny. 
     
@@ -95,7 +95,7 @@ This is a guided challenge so there are a lot of questions to answer.
     
     The attacker checked jenny’s permissions on the computer using `sudo -l`, which shows what commands the user can run as root. In this case, jenny had unrestricted permissions and could execute all commands as root.
     
-    ![{D7862A63-5E7E-4659-9D60-2478118C5359}.png](D7862A63-5E7E-4659-9D60-2478118C5359.png)
+    ![{D7862A63-5E7E-4659-9D60-2478118C5359}.png](Images/D7862A63-5E7E-4659-9D60-2478118C5359.png)
     
 
 1. `The attacker downloaded something from GitHub. What is the name of the GitHub project?`
@@ -114,7 +114,7 @@ This is a guided challenge so there are a lot of questions to answer.
 
 Scenario: 
 
-![{D75B5794-8DA7-466D-BDC1-660366FA193E}.png](D75B5794-8DA7-466D-BDC1-660366FA193E.png)
+![{D75B5794-8DA7-466D-BDC1-660366FA193E}.png](Images/D75B5794-8DA7-466D-BDC1-660366FA193E.png)
 
 ### Initial Reconnaissance
 
