@@ -25,13 +25,13 @@ Nmap scan:
 nmap -A -v <IP> -oN nmapresult.txt
 ```
 
-![{4E3BC2D2-0C6C-44E9-9AE2-996C003CFC05}.png](4E3BC2D2-0C6C-44E9-9AE2-996C003CFC05.png)
+![{4E3BC2D2-0C6C-44E9-9AE2-996C003CFC05}.png](Images/4E3BC2D2-0C6C-44E9-9AE2-996C003CFC05.png)
 
 The website at port 80 seems like a typical website. Directory fuzzing also leads nowhere. 
 
 From the nmap scan and the Wappalyzer extension, the server is running on Apache version 2.4.49. 
 
-![{050B1BC6-8B12-4EF6-997B-B1D066FC201D}.png](050B1BC6-8B12-4EF6-997B-B1D066FC201D.png)
+![{050B1BC6-8B12-4EF6-997B-B1D066FC201D}.png](Images/050B1BC6-8B12-4EF6-997B-B1D066FC201D.png)
 
 ## Exploitation
 
@@ -154,7 +154,7 @@ linpeas.sh
 
 I did not find a way to escape, but I found something equally interesting. 
 
-![{451DA9D4-48DC-4E6C-AF02-EAB42F3AA711}.png](451DA9D4-48DC-4E6C-AF02-EAB42F3AA711.png)
+![{451DA9D4-48DC-4E6C-AF02-EAB42F3AA711}.png](Images/451DA9D4-48DC-4E6C-AF02-EAB42F3AA711.png)
 
 ## Escalate to root
 
@@ -218,7 +218,7 @@ port 5986 is open
 
 Ports 22 and 80 are common but 5986 is not. 
 
-![{647E71F9-4DA2-4F90-B601-13E9B3D64670}.png](647E71F9-4DA2-4F90-B601-13E9B3D64670.png)
+![{647E71F9-4DA2-4F90-B601-13E9B3D64670}.png](Images/647E71F9-4DA2-4F90-B601-13E9B3D64670.png)
 
 Its used by WinRM for Windows machines and OMI for Linux. I found multiple exploits on this service in this article: https://www.wiz.io/blog/omigod-critical-vulnerabilities-in-omi-azure
 
