@@ -139,7 +139,7 @@ Task Completed
 
 The `/simple` endpoint contains a default template for the “CMS Made Simple” which is an open source template provider for Content Management System. Fortunately, the version was also present at the bottom which allows the checking of any known vulnerabilities associated with it. 
 
-![{4AA16369-DCF5-4149-AC6F-A0594220B306}.png](4AA16369-DCF5-4149-AC6F-A0594220B306.png)
+![{4AA16369-DCF5-4149-AC6F-A0594220B306}.png](Images/4AA16369-DCF5-4149-AC6F-A0594220B306.png)
 
 Any vulnerability associated can be checked from “exploit-db.com” or by using its command line variable through the “searchsploit” command.
 
@@ -159,7 +159,7 @@ CMS Made Simple < 2.2.10 - SQL Injection                       | php/webapps/466
 
 The script gives the answer to another one of the questions on TryHackMe. 
 
-![{B763759E-5B40-4E4E-83FB-D0CBAF4188FF}.png](B763759E-5B40-4E4E-83FB-D0CBAF4188FF.png)
+![{B763759E-5B40-4E4E-83FB-D0CBAF4188FF}.png](Images/B763759E-5B40-4E4E-83FB-D0CBAF4188FF.png)
 
 `CVE-2019-9053` is a highly severe SQLi in CMS Made Simple in the `News` module. Specifically, it suffers from blind time-based SQLi through the `m1_idlist` parameter. There is also no authentication required for this, which makes it more dangerous. 
 
@@ -183,7 +183,7 @@ WIth these username and password, the first place I attempted it was on ssh sinc
 
 Here, `-p 2222` is needed since ssh uses port 22 by default. 
 
-![{E53359F0-0C31-411D-AADF-7D6A59FB2ACC}.png](E53359F0-0C31-411D-AADF-7D6A59FB2ACC.png)
+![{E53359F0-0C31-411D-AADF-7D6A59FB2ACC}.png](Images/E53359F0-0C31-411D-AADF-7D6A59FB2ACC.png)
 
 Then I claimed the user flag. 
 
@@ -213,7 +213,7 @@ User mitch may run the following commands on Machine:
 
 Once a command is identified, the next step is to check whether it can be abused to spawn a shell or escalate privilege. The best place to check is `GTFObins.org`.
 
-![{E5750D41-A0F6-4254-A191-00EEC0D96D6D}.png](E5750D41-A0F6-4254-A191-00EEC0D96D6D.png)
+![{E5750D41-A0F6-4254-A191-00EEC0D96D6D}.png](Images/E5750D41-A0F6-4254-A191-00EEC0D96D6D.png)
 
 (I know it says `vi` and not `vim` but since vim just inherits from vi this will work on vim as well). 
 
