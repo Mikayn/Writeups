@@ -2,7 +2,7 @@
 
 ## **Challenge Information:**
 
-**Link:** [https://tryhackme.com/room/easyctf](https://tryhackme.com/room/h4cked)
+**Link:** [https://tryhackme.com/room/easyctf](https://tryhackme.com/room/easyctf)
 
 **Difficulty:** Easy
 
