@@ -2,7 +2,7 @@
 
 ## **Challenge Information:**
 
-**Link:** [https://tryhackme.com/room/ohmyweb](https://tryhackme.com/room/h4cked)
+**Link:** [https://tryhackme.com/room/ohmyweb](https://tryhackme.com/room/ohmyweb)
 
 **Difficulty:** Medium
 
