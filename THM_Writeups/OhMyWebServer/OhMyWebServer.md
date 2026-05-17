@@ -13,9 +13,14 @@
 - Name: Oh My WebServer
 - Additional Info: Can you root me?
 
-## TLDR
+<details> 
+  <summary> <h2> TLDR (Spoilers) </h2></summary>
 
 A web app on Apache 2.4.49 was vulnerable to path traversal and RCE, through which a shell was obtained inside a Docker container as `daemon`. The `cap_setuid` capability was set on Python, allowing escalation to root inside the container. The host system's IP was identified and port 5986 was found running OMI (Open Management Infrastructure), which was vulnerable to `CVE-2021-38647`, thereby compromising the host.
+
+</details>
+
+---
 
 ## Initial Reconnaissance
 
