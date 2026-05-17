@@ -11,9 +11,15 @@
 **Scenario:**   
 ![{7B64F933-AC99-40C5-8D27-43A8EB0C2316}.png](Images/7B64F933-AC99-40C5-8D27-43A8EB0C2316.png)
 
-## TLDR
+
+<details> 
+  <summary> <h2> TLDR (Spoilers) </h2> </summary>
 
 A Python socket server on port 8000 directly interprets user input, allowing a reverse shell as `www-data`. Credentials for user `think` are found in a `.git/config` file due to password reuse. Root is achieved by fuzzing a hidden `admin` endpoint on the same socket server and brute-forcing the password with a custom script.
+
+</details>
+
+---
 
 ## Initial Reconnaissance
 
