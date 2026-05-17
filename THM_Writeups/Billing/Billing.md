@@ -14,9 +14,14 @@
 - Info: Some mistakes can be costly.
 - Note: Bruteforcing is out of scope for this room.
 
-## TLDR
+<details>
+<summary> <h2> TLDR (Spoilers) </h2></summary>
 
 A web app was identified to be `MagnusBilling` on port 80. An entry was found on `exploitdb` through which RCE via command injection was possible. A shell was obtained on the machine as `asterisk`. Entry in home directory `/home/magnus` was world readable and the user flag was obtained. `asterisk` had sudo perms on `fail2ban-client`. By editing the `actionban` and setting a SUID bit on `/bin/bash` when an IP is banned, root was obtained, thereby compromising the system. 
+
+</details>
+
+---
 
 ## Initial Reconnaissance
 
