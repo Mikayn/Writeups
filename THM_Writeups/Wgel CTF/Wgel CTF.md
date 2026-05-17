@@ -15,7 +15,7 @@
 
 ```html
 <details>
-<summary> TLDR </summary>
+  <summary> TLDR </summary>
 
 <p> Initial enumeration of a web service exposed a username `jessie` and hidden directory through fuzzing, revealing an SSH private key used to access the system as a low-privilege user. Post-exploitation enumeration identified sudo permission of `wget` as root without a password. This was abused to overwrite `/etc/passwd` with a crafted entry, enabling creation of a privileged user. The added user was used to switch to root, resulting in full system compromise and retrieval of the root flag. </p>
 
