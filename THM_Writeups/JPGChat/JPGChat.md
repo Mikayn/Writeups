@@ -26,7 +26,7 @@ A python chat application was identified on port `3000` with source code availab
 
 Nmap scan:
 
-```php
+```
 nmap -A -v <IP> -oN nmapresult.txt
 ```
 
@@ -34,7 +34,7 @@ nmap -A -v <IP> -oN nmapresult.txt
 
 There seems to be a service running on port 3000 but nmap cannot recognize it with certainty. I used `netcat` to access the port. 
 
-```bash
+```
 └─$ nc 10.49.176.37 3000
 Welcome to JPChat
 the source code of this service can be found at our admin's github
@@ -44,7 +44,7 @@ REPORT USAGE: use [REPORT] to report someone to the admins (with proof)
 
 I tested out the apps functionalities using the message and report channel. 
 
-```bash
+```
 Welcome to JPGChat
 the source code of this service can be found at our admin's github
 MESSAGE USAGE: use [MESSAGE] to message the (currently) only channel
