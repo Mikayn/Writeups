@@ -13,9 +13,14 @@
 - Name: Simple CTF
 - Additional Info: Beginner level CTF
 
-## TLDR
+<details> 
+<summary> <h2> TLDR (Spoilers) </h2></summary>
 
 A web app had `CMS Made Simple` on `/simple` directory found by fuzzing on version `2.2.8` vulnerable to unauthenticated SQLi. Credentials were obtained through and used to log in to SSH. The user had sudo permissions on `vim`through which a root shell was obtained thereby compromising the system. 
+
+</details>
+
+---
 
 ## Initial Reconnaissance
 
